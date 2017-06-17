@@ -1,10 +1,11 @@
+//Package raindrops provide conversion method from a number to raindrop-speak
 package raindrops
 
 import "strconv"
 
 const testVersion = 3
 
-// Converts the given integer to raindrop-speak
+// Convert translates the given integer to raindrop-speak
 func Convert(num int) string {
 	translation := pling(num) + plang(num) + plong(num)
 	if len(translation) > 0 {

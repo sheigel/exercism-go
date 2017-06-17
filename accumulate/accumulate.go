@@ -1,4 +1,4 @@
-//accumulate offers support for mapping functions
+//Package accumulate offers support for mapping functions
 package accumulate
 
 const testVersion = 1
