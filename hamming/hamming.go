@@ -10,7 +10,7 @@ const testVersion = 6
 //Distance fails if the provided DNA strands are of different length.
 func Distance(a, b string) (int, error) {
 	if len(a) != len(b) {
-		return 0, errors.New("Different length DNA strands")
+		return -1, errors.New("Different length DNA strands")
 	}
 
 	var differenceCount int
