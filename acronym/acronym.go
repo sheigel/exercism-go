@@ -10,11 +10,10 @@ const testVersion = 3
 
 //Abbreviate generates the acronym from the provided string. This
 func Abbreviate(phrase string) string {
-	splitter, _ := regexp.Compile(`[\s-]`)
-	words := splitter.Split(phrase, -1)
+	wordDelimiter, _ := regexp.Compile(`[\s-]`)
 
 	var acronym string
-	for _, word := range words {
+	for _, word := range wordDelimiter.Split(phrase, -1) {
 		firstRune, _ := utf8.DecodeRuneInString(word)
 
 		acronym = acronym + strings.ToUpper(string(firstRune))
