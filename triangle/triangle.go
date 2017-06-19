@@ -5,12 +5,14 @@ import "math"
 
 const testVersion = 3
 
-type Kind string
+type Kind int
 
-var NaT Kind = "NaT" // not a triangle
-var Equ Kind = "Equ" // equilateral
-var Iso Kind = "Iso" // isosceles
-var Sca Kind = "Sca" // scalene
+const (
+	NaT Kind = iota // not a triangle
+	Equ             // equilateral
+	Iso             // isosceles
+	Sca             // scalene
+)
 
 var notAllowedTriangleSideValue = []func(side float64) bool{
 	math.IsNaN,

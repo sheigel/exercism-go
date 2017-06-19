@@ -2,8 +2,8 @@
 package bob
 
 import (
-	"strings"
 	"regexp"
+	"strings"
 )
 
 const testVersion = 3
